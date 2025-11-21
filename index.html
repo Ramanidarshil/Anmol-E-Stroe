@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmol E-Store</title>
+    <link rel="stylesheet" href="aseet/css/style.css">
+    <link rel="icon" type="image/x-icon" href="aseet/img/logo-removebg-preview.png">
+</head>
+
+<body>
+
+<!-- 🔒 LOGIN PROTECTION -->
+<script>
+  if (localStorage.getItem("loggedIn") !== "true") {
+    window.location.hash = "login";
+  }
+</script>
+
+<header class="header-wrapper">
+    <nav class="main-nav">
+        <img src="aseet/img/logo-removebg-preview.png" width="120px" alt="Logo">
+        <div class="logo">Anmol E-Store</div>
+
+        <div class="nav-links">
+            <a href="#home" onclick="showSection('home', this)">Home</a>
+            <a href="#products" onclick="showSection('products', this)">Products</a>
+            <a href="#cart" onclick="showSection('cart', this)">Cart</a>
+            <a href="#login" onclick="showSection('login', this)">Login</a>
+            <a href="#" onclick="logout()">Logout</a>
+        </div>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<section id="home" class="active">
+
+    <div class="a-main-content">
+        <div class="a-promo-grid">
+
+            <div class="a-card">
+                <h3>Revamp your home in style</h3>
+                <div class="a-card-images">
+                    <figure class="a-card-item">
+                        <img src="aseet/img/home/Cushion cover.jpg" alt="Cushion covers" class="product-img">
+                        <figcaption>Cushion covers, bedsheets...</figcaption>
+                        <button class="add-btn" data-name="Cushion cover" data-price="1200">Add to Cart</button>
+                    </figure>
+
+                    <figure class="a-card-item">
+                        <img src="aseet/img/home/figurines.jpg" alt="Figurines" class="product-img">
+                        <figcaption>Figurines, vases...</figcaption>
+                        <button class="add-btn" data-name="figurines" data-price="800">Add to Cart</button>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="a-card">
+                <h3>Appliances for your home | Up to 55% off</h3>
+                <div class="a-card-images">
+                    <figure class="a-card-item">
+                        <img src="aseet/img/home/Air conditioners.jpg" alt="Air conditioner" class="product-img">
+                        <figcaption>Air conditioners</figcaption>
+                        <button class="add-btn" data-name="Air conditioner" data-price="120000">Add to Cart</button>
+                    </figure>
+
+                    <figure class="a-card-item">
+                        <img src="aseet/img/home/Refrigrator.jpg" alt="Refrigerator" class="product-img">
+                        <figcaption>Refrigerators</figcaption>
+                        <button class="add-btn" data-name="Refrigerator" data-price="60000">Add to Cart</button>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="a-card">
+                <h3>Up to 50% off | Baby care & toys</h3>
+                <div class="a-card-images">
+                    <figure class="a-card-item">
+                        <img src="aseet/img/home/toye car.jpg" alt="Baby product" class="product-img">
+                        <figcaption>Baby products</figcaption>
+                        <button class="add-btn" data-name="baby product" data-price="1200">Add to Cart</button>
+                    </figure>
+
+                    <figure class="a-card-item">
+                        <img src="aseet/img/home/truck.jpg" alt="Ride-on toy" class="product-img">
+                        <figcaption>Ride-on toy</figcaption>
+                        <button class="add-btn" data-name="truck" data-price="250">Add to Cart</button>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCTS SECTION -->
+<section id="products">
+    <h2>Products</h2>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="aseet/img/moblie/1.jpg" alt="iphone 17">
+            <h3>iphone 17</h3>
+            <p class="price">₹1,12,499</p>
+            <button class="add-btn" data-name="iphone 17" data-price="112499">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="aseet/img/moblie/iphone 15.jpg" alt="iphone 15">
+            <h3>iphone 15</h3>
+            <p class="price">₹60,499</p>
+            <button class="add-btn" data-name="iphone 15" data-price="60499">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="aseet/img/moblie/oneplus.jpg" alt="oneplus">
+            <h3>oneplus</h3>
+            <p class="price">₹35,999</p>
+            <button class="add-btn" data-name="oneplus" data-price="35999">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="aseet/img/moblie/oppo f31 5g.jpg" alt="oppo f31 5g">
+            <h3>oppo f31 5g</h3>
+            <p class="price">₹9,499</p>
+            <button class="add-btn" data-name="oppo f31 5g" data-price="9499">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="aseet/img/moblie/samsung galaxy s23.jpg" alt="samsung galaxy s23">
+            <h3>samsung galaxy s23</h3>
+            <p class="price">₹18,299</p>
+            <button class="add-btn" data-name="samsung galaxy s23" data-price="18299">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="aseet/img/moblie/vivo t4x.jpg" alt="vivo t4x">
+            <h3>vivo t4x</h3>
+            <p class="price">₹22,499</p>
+            <button class="add-btn" data-name="vivo t4x" data-price="22499">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- LOGIN SECTION -->
+<section id="login">
+    <h1>Login Form</h1>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="https://script.google.com/macros/s/AKfycbxen_oE5xD80as5EZdMaqwj3GKThBQ54ou5ZYw07aKRuaRqzOl9rqvP2O0oYZcf3mEt_g/exec" method="POST">
+            <input type="hidden" name="action" value="login">
+
+            <label>Username</label>
+            <input type="text" name="username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="footer">Powered by Anmol E-Store</div>
+    </div>
+</section>
+
+<!-- CART SECTION -->
+<section id="cart">
+    <h2>Anmol E-Store Cart</h2>
+
+    <table id="cart-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price (₹)</th>
+                <th>Qty</th>
+                <th>Subtotal (₹)</th>
+            </tr>
+        </thead>
+
+        <tbody id="cart-items"></tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align:right; font-weight:bold;">Total:</td>
+                <td id="total">0</td>
+            </tr>
+        </tfoot>
+    </table>
+</section>
+
+<!-- LOGOUT JS -->
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    fetch("https://script.google.com/macros/s/AKfycbxdbapQiMoRXdk2sDfI7lAQslt2gUNdHiyGudPtxZlqXWdrcTngfEM8SxaBFDx6Mzco0w/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+    });
+
+    alert("Login submitted! Please wait for redirect...");
+});
+</script>
+
+<!-- SECTION SWITCHER + CART JS -->
+<script src="aseet/js/script.js"></script>
+
+</body>
+</html>
